@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-MY">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D'Secret Garden 2 @ Taman Kempas Indah | KSL 永久地契公寓</title>
+  <style>
+    :root {
+      --primary: #c2410c;
+      --primary-hover: #9a3412;
+      --secondary: #0f172a;
+      --accent: #25d366;
+      --bg-light: #f8fafc;
+      --text: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    body { background-color: var(--bg-light); color: var(--text); line-height: 1.6; }
+    
+    /* Header / Hero */
+    .hero {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 12px; font-weight: 800; }
+    .hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto 25px; color: #cbd5e1; }
+    .hero-btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: transform 0.2s;
+    }
+    .hero-btn:hover { transform: translateY(-2px); }
+
+    /* Highlights Section */
+    .container { max-width: 900px; margin: -30px auto 40px; padding: 0 15px; }
+    .stats-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 25px;
+      text-align: center;
+    }
+    .stat-item h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 5px; }
+    .stat-item p { font-size: 0.9rem; color: #64748b; }
+
+    /* Section Styling */
+    .section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    .section-title { font-size: 1.6rem; text-align: center; margin-bottom: 30px; color: var(--secondary); position: relative; }
+    .section-title::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background: var(--primary);
+      display: block;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Cards */
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; }
+    .card h4 { font-size: 1.2rem; color: var(--secondary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .card p { font-size: 0.95rem; color: #475569; margin-bottom: 10px; }
+
+    /* Killer Feature Box */
+    .killer-box {
+      background: #fff7ed;
+      border-left: 5px solid var(--primary);
+      padding: 20px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 30px;
+    }
+
+    /* Comparison Table */
+    .table-box { background: #fff; border-radius: 12px; overflow-x: auto; border: 1px solid #e2e8f0; margin-bottom: 30px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 14px 18px; border-bottom: 1px solid #e2e8f0; }
+    th { background: #f1f5f9; color: var(--secondary); }
+
+    /* Call to Action Banner */
+    .cta-banner {
+      background: var(--secondary);
+      color: #fff;
+      padding: 40px 20px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta-banner h2 { font-size: 1.8rem; margin-bottom: 12px; }
+    .cta-banner p { color: #94a3b8; margin-bottom: 25px; }
+
+    /* Floating WhatsApp Button */
+    .wa-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--accent);
+      color: #fff;
+      border-radius: 50px;
+      padding: 14px 22px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      z-index: 1000;
+      transition: transform 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.05); }
+
+    footer { text-align: center; padding: 20px; font-size: 0.85rem; color: #94a3b8; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <span class="badge">KSL 主板上市旗舰开发</span>
+    <h1>D'Secret Garden 2</h1>
+    <p>新山 Kempas Indah 核心区 · 永久地契服务式公寓 (HDA保障)<br>同样上车，别人买未来，你买已住满 10 年的成熟配套！</p>
+    <a href="https://wa.me/60179939124?text=您好，我想了解更多关于%20D'Secret%20Garden%202%20的项目配套与优惠！" target="_blank" class="hero-btn">
+      💬 WhatsApp 索取配套与户型图
+    </a>
+  </header>
+
+  <!-- Quick Snapshot -->
+  <div class="container">
+    <div class="stats-card">
+      <div class="stat-item">
+        <h3>RM239k 起</h3>
+        <p>月供仅需约 RM950 起</p>
+      </div>
+      <div class="stat-item">
+        <h3>RM0.10/sqft</h3>
+        <p>全柔最低管理费 (10年省RM20k+)</p>
+      </div>
+      <div class="stat-item">
+        <h3>Freehold</h3>
+        <p>永久地契 / 外籍RM400k可购</p>
+      </div>
+      <div class="stat-item">
+        <h3>送 2 车位</h3>
+        <p>2房户型标配双车位</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Advantages -->
+  <main class="section">
+    <!-- 杀手级卖点 -->
+    <div class="killer-box">
+      <h3 style="color: var(--primary); margin-bottom: 8px;">🔥 杀手级优势：全新山最低管理费 (RM0.10/sqft)</h3>
+      <p>市场普遍为 RM0.25 - 0.35/sqft。以主力 721 sqft 计算，每月管理费仅 <strong>RM72.10</strong>，相比市面竞品每月现省 RM150+！10 年持有省下超过 RM20,000，直接化作租金净利润与持有护城河。</p>
+    </div>
+
+    <h2 class="section-title">为什么选择 D'Secret Garden 2？</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h4>🚗 3大高速交汇 · 交通心脏</h4>
+        <p>直通南北大道 (PLUS)、东部疏散大道 (EDL) 及巴西古当大道。EDL 直通 CIQ 关口仅需 10 分钟；紧邻 KTM Kempas Baru 与 ETS，享 2026 年底 RTS 跨境通勤红利。</p>
+      </div>
+      <div class="card">
+        <h4>🛍️ 5分钟商圈 · 入住即生活</h4>
+        <p>无需等待 3-5 年荒地规划！5-10 分钟车程覆盖 Mid Valley Southkey、AEON Tebrau、IKEA、Toppen、Mount Austin 潮流商圈及中央医院。</p>
+      </div>
+      <div class="card">
+        <h4>🏊 28+ 度假级设施 · 楼下自营商铺</h4>
+        <p>配备 50 米度假泳池、私人咖啡厅、健身房、空中花园与 3 层安全保障。一期底层规划 16 间商铺，便利店餐饮下楼即达。</p>
+      </div>
+      <div class="card">
+        <h4>📈 真实正现金流 · 租客客群稳定</h4>
+        <p>隔壁一期已交出亮眼租金实绩（主力2房租金 RM1,250 - 1,600，月供仅 RM1,103 起）。通吃新马跨境通勤族、周边工业区白领与学院生。</p>
+      </div>
+    </div>
+
+    <!-- 户型与投资策略 -->
+    <div style="margin-top: 50px;">
+      <h2 class="section-title">户型规划与租金实测</h2>
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th>户型</th>
+              <th>面积 (sqft)</th>
+              <th>预计租金</th>
+              <th>预计月供</th>
+              <th>客群定位</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Studio</strong></td>
+              <td>506 sqft</td>
+              <td>RM 1,100+</td>
+              <td>RM 950 起</td>
+              <td>单身通勤族 / 租金回报首选</td>
+            </tr>
+            <tr>
+              <td><strong>2房2厕 (主力)</strong></td>
+              <td>667 - 829 sqft</td>
+              <td>RM 1,300 - 1,600</td>
+              <td>RM 1,103 起</td>
+              <td>家庭与合租 / <strong>送双车位</strong></td>
+            </tr>
+            <tr>
+              <td><strong>3房2厕</strong></td>
+              <td>893 sqft</td>
+              <td>RM 1,800+</td>
+              <td>RM 1,400+</td>
+              <td>小家庭自住 / 永久传承</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.85rem; color: #64748b; text-align: center;">* 注：Studio 420 及 1房 517 sqft 房型已告售罄，其余主力户型火热去化中。</p>
+    </div>
+
+    <!-- CTA Card -->
+    <div class="cta-banner">
+      <h2>限时早鸟优惠方案</h2>
+      <p>免律师费 · 免贷款合约费 · 送精选家具配套咨询方案</p>
+      <a href="https://wa.me/60179939124?text=您好，我想预约参观%20D'Secret%20Garden%202%20示范单位，并了解早鸟优惠详情！" target="_blank" class="hero-btn">
+        立即预约参观 Showroom
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>示范单位地址：112 Jalan Kempas Indah 1/1, Taman Kempas Indah, Johor Bahru</p>
+    <p>© D'Secret Garden 2 官方项目资讯 · 专属置业顾问服务</p>
+  </footer>
+
+  <!-- 常驻 WhatsApp 浮动按钮 -->
+  <a href="https://wa.me/60179939124?text=您好！我在网站上看到%20D'Secret%20Garden%202，想咨询详细资料与配套。" target="_blank" class="wa-float">
+    <span>💬 WhatsApp 咨询</span>
+  </a>
+
+</body>
+</html>
